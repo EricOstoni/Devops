@@ -11,11 +11,14 @@ jobs:
       - name: Hello World
         run: echo "Hello World"
       - name : Environment Variables
-        env: CURRENT_DATE  : 2024-10-26
+        env:
+           CURRENT_DATE  : '2024-10-26'
         run: echo "$CURRENT_DATE --date"
-    -name: Dump Github context 
-    env: GITHUB_CONTEXT: ${{  toJson(github).date }}
-    run: echo "$GITHUB_CONTEXT"
+      - name: Dump Github context 
+        env: 
+           GITHUB_CONTEXT: ${{  toJson(github).date }}
+        run: echo "$GITHUB_CONTEXT"
+
 
 
 
