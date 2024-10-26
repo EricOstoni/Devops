@@ -27,7 +27,7 @@ jobs:
         run: ls -al
 
       - name: Checkout Repository
-        run: actions/checkout@v4
+        uses: actions/checkout@v4
 
       - name: List Environment Variables
         run: env
